@@ -108,9 +108,13 @@ const Scholarform = () => {
               onChange={handleChange}
             >
               <option value="">Select Class</option>
-              <option value="Class A">Class A</option>
-              <option value="Class B">Class B</option>
-              <option value="Class C">Class C</option>
+              <option value="Class VIth">Class VIth</option>
+              <option value="Class VIIth">Class VIIth</option>
+              <option value="Class VIIItH">Class VIIIth</option>
+              <option value="Class IXth">Class IXth</option>
+              <option value="Class Xth">Class Xth</option>
+              <option value="Class XIth">Class XIth</option>
+              <option value="Class XIIth">Class XIIth</option>
             </select>
           </label>
 
@@ -122,9 +126,12 @@ const Scholarform = () => {
               onChange={handleChange}
             >
               <option value="">Select Marks</option>
-              <option value="A+">A+</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
+              <option value="90-100%">90-100%</option>
+              <option value="80-90%">80-90%</option>
+              <option value="70-80%">70-80%</option>
+              <option value="60-70%">60-70%</option>
+              <option value=">60%">below 60%</option>
+              
             </select>
           </label>
         </div>
@@ -151,9 +158,9 @@ const Scholarform = () => {
               onChange={handleChange}
             >
               <option value="">Select Time Slot</option>
-              <option value="Morning">Morning</option>
-              <option value="Afternoon">Afternoon</option>
-              <option value="Evening">Evening</option>
+              <option value="09:00 AM">09:00 AM</option>
+              <option value="12:00 PM">12:00 PM</option>
+              <option value="03:00 PM">03:00 PM</option>
             </select>
           </label>
         </div>
@@ -166,9 +173,9 @@ const Scholarform = () => {
               onChange={handleChange}
             >
               <option value="">Select Scholarship</option>
-              <option value="Merit">Merit</option>
-              <option value="Financial Need">Financial Need</option>
-              <option value="Sports">Sports</option>
+              <option value="Below 10th class">Below class 10th</option>
+              <option value="NEET">NEET</option>
+              <option value="JEE">JEE</option>
             </select>
           </label>
         </div>
