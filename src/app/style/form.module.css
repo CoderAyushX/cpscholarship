@@ -78,31 +78,27 @@
 .form .entry_box input:focus {
   border-color: var(--primary-color);
 }
-
+.form .entry_box select:focus {
+  border-color: var(--primary-color);
+}
 /****************Responsive****************/
 @media only screen and (max-width: 600px) {
- 
   .scholar_head h2::after {
     top: -10%;
-
   }
 
-
-
+  .form .entry_box {
+    margin-bottom: 0px;
+  }
 
   .form .entry_box input {
     width: 320px;
-  
   }
   .form .entry_box select {
     width: 320px;
-
   }
 
   .form button {
     padding: 10px 45px;
-   
   }
-
- 
 }
