@@ -153,6 +153,7 @@
 
 .childDiv:first-child p {
   width: 100%;
+  font-size: 14px;
 }
 
 .herosection div:nth-child(2) {
