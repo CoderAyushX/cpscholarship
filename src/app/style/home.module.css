@@ -26,16 +26,17 @@
 }
 
 .childDiv:first-child p {
-  font-size: 14px;
+  font-size: 16px;
   width: 80%;
   color: var(--text-color-light);
   font-weight: 500;
-  line-height: 20px;
+  margin-top: 5px;
+  line-height: 22px;
 }
 
 .childDiv:first-child .apply_button {
   margin-top: 20px;
-  padding: 10px 30px;
+  padding: 15px 35px;
   background-color: var(--primary-color);
   color: var(--text-color-dark);
   text-decoration: none;
@@ -147,7 +148,7 @@
 @media only screen and (max-width: 600px){
 /** hero section code */
 .herosection {
-  height: 450px;
+  height: 550px;
 }
 
 .childDiv:first-child p {
@@ -164,11 +165,20 @@
   padding: 10px;
 }
 
-
+.howto_head_box h2::after {
+  top: -10%;
+}
 
 /** what other says */
 .other_says_word_container{
    flex-direction: column;
 }
+
+.other_says_box_details{
+ font-size: 16px;
+ margin: 20px 15px;
+ line-height: 26px;
+}
+
 
 }
