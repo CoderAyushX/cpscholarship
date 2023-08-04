@@ -25,15 +25,16 @@
   display: flex;
   align-items: center;
 }
-.navbar__actions p {
+.navbar__actions .contact_us {
   color: var(--text-color-light);
   margin-right: 30px;
   margin-top: 5px;
   font-size: 15px;
   font-weight: 600;
+  text-decoration: none;
   cursor: pointer;
 }
-.navbar__actions p:hover {
+.navbar__actions .contact_us:hover {
   color: #000;
 }
 .navbar__actions .apply_button {
@@ -50,4 +51,29 @@
 .navbar__actions .apply_button:hover {
   opacity: 0.8;
   transition: 0.1s;
+}
+/****************Responsive****************/
+@media only screen and (max-width: 600px){
+  /* components/Header.js */
+.navbar {
+  height: 60px;
+}
+
+.navbar .image_container {
+  width: 150px;
+  height: 26px;
+}
+
+
+.navbar__actions .contact_us {
+  display: none;
+}
+
+.navbar__actions .apply_button {
+  padding: 6px 8px;
+  font-size: 12px;
+
+}
+
+
 }

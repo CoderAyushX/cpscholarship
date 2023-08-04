@@ -1,3 +1,4 @@
+/** hero section code */
 .herosection {
   max-width: 1000px;
   margin: auto;
@@ -32,7 +33,7 @@
   line-height: 18px;
 }
 
-.apply_button {
+.childDiv:first-child .apply_button {
   margin-top: 20px;
   padding: 10px 30px;
   background-color: var(--primary-color);
@@ -43,11 +44,11 @@
   display: flex;
   align-items: center;
 }
-.apply_button .icon {
+.childDiv:first-child .apply_button .icon {
   margin-left: 8px;
 }
 
-.apply_button:hover {
+.childDiv:first-child .apply_button:hover {
   opacity: 0.8;
   transition: 0.1s;
 }
@@ -59,4 +60,120 @@
 .herosection div:nth-child(2) .childDiv {
   width: 100%;
   height: 100%;
+}
+
+/** how to apply css*/
+.howto_head_box {
+  display: flex;
+  margin: 120px 0 20px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.howto_head_box h2 {
+  font-weight: 900;
+  font-size: 26px;
+  position: relative;
+}
+
+.howto_head_box h2::after {
+  content: "";
+  width: 30%;
+  height: 6px;
+  border-radius: 10px;
+  position: absolute;
+  top: -30%;
+  left: 0%;
+  background: var(--primary-color);
+}
+
+.arrow_box {
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  position: relative;
+}
+
+.flip_horizontal {
+  transform: scaleX(-1);
+}
+/* what other says */
+
+.other_says_box{
+  max-width: 1050px;
+  margin: auto;
+  margin-top: 5px;
+  padding: 10px ;
+
+}
+.other_says_word_container{
+   display: flex;
+}
+
+.other_says_words{
+   max-width: 550px;
+   height: auto;
+   padding: 10px 10px 20px 10px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   border-radius: 10px;
+   background: #fff;
+   border-radius: 10px;
+   margin: 20px 10px;
+   box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}
+.other_says_box_details{
+  font-size: 14px;
+  font-weight: 300;
+  margin: 20px 45px;
+  line-height: 24px;
+  color: var(--text-color-light);
+}
+.other_says_image{
+  width:60px ;
+  height: 60px;
+  position: relative;
+}
+
+.other_says_name{
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--secondary-color);
+  
+}
+
+/****************Responsive****************/
+@media only screen and (max-width: 600px){
+/** hero section code */
+.herosection {
+ 
+  height: 450px;
+}
+
+.childDiv:first-child {
+  align-items: center;
+}
+.childDiv:first-child p {
+
+  width: 100%;
+}
+
+.herosection div:nth-child(2) {
+  display: none;
+}
+
+
+/** how to apply css*/
+.howto_head_box {
+  padding: 10px;
+}
+
+
+
+/** what other says */
+.other_says_word_container{
+   flex-direction: column;
+}
+
 }

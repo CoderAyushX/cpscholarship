@@ -11,11 +11,14 @@ const Header = () => {
           src={"/logo.png"}
           layout="fill"
           className={styles.image}
+          alt="how to image"
           quality={100}
         />
       </div>
       <div className={styles.navbar__actions}>
-        <p>Contact us</p>
+      <Link href="/contact" className={styles.contact_us}>
+          Contact us
+        </Link>
         <Link href="/apply" className={styles.apply_button}>
           Apply Now
         </Link>
