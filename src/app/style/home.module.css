@@ -1,8 +1,8 @@
 /** hero section code */
 .herosection {
-  max-width: 1000px;
+  max-width: 1150px;
   margin: auto;
-  height: 500px;
+  height: 600px;
   display: flex;
   padding: 0 10px;
 }
@@ -17,20 +17,20 @@
 }
 
 .childDiv:first-child h1 {
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 900;
 }
 .childDiv:first-child h1 span {
   color: var(--secondary-color);
-  font-size: 28px;
+  font-size: 32px;
 }
 
 .childDiv:first-child p {
-  font-size: 12px;
+  font-size: 14px;
   width: 80%;
   color: var(--text-color-light);
   font-weight: 500;
-  line-height: 18px;
+  line-height: 20px;
 }
 
 .childDiv:first-child .apply_button {
@@ -72,7 +72,7 @@
 }
 .howto_head_box h2 {
   font-weight: 900;
-  font-size: 26px;
+  font-size: 32px;
   position: relative;
 }
 
@@ -100,7 +100,7 @@
 /* what other says */
 
 .other_says_box{
-  max-width: 1050px;
+  max-width: 1250px;
   margin: auto;
   margin-top: 5px;
   padding: 10px ;
@@ -111,7 +111,7 @@
 }
 
 .other_says_words{
-   max-width: 550px;
+   max-width: 600px;
    height: auto;
    padding: 10px 10px 20px 10px;
    display: flex;
@@ -124,10 +124,10 @@
    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
 }
 .other_says_box_details{
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 300;
   margin: 20px 45px;
-  line-height: 24px;
+  line-height: 26px;
   color: var(--text-color-light);
 }
 .other_says_image{
@@ -137,7 +137,7 @@
 }
 
 .other_says_name{
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 600;
   color: var(--secondary-color);
   
@@ -147,15 +147,10 @@
 @media only screen and (max-width: 600px){
 /** hero section code */
 .herosection {
- 
   height: 450px;
 }
 
-.childDiv:first-child {
-  align-items: center;
-}
 .childDiv:first-child p {
-
   width: 100%;
 }
 
