@@ -53,27 +53,23 @@
   transition: 0.1s;
 }
 /****************Responsive****************/
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 600px) {
   /* components/Header.js */
-.navbar {
-  height: 60px;
-}
+  .navbar {
+    height: 60px;
+  }
 
-.navbar .image_container {
-  width: 150px;
-  height: 26px;
-}
+  .navbar .image_container {
+    width: 150px;
+    height: 26px;
+  }
 
+  .navbar__actions .contact_us {
+    display: none;
+  }
 
-.navbar__actions .contact_us {
-  display: none;
-}
-
-.navbar__actions .apply_button {
-  padding: 8px 12px;
-  font-size: 12px;
-
-}
-
-
+  .navbar__actions .apply_button {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
 }

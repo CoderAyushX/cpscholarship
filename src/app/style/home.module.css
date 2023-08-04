@@ -1,8 +1,8 @@
 /** hero section code */
 .herosection {
-  max-width: 1150px;
+  max-width: 1250px;
   margin: auto;
-  height: 600px;
+  height: 650px;
   display: flex;
   padding: 0 10px;
 }
@@ -100,87 +100,82 @@
 }
 /* what other says */
 
-.other_says_box{
+.other_says_box {
   max-width: 1250px;
   margin: auto;
   margin-top: 5px;
-  padding: 10px ;
+  padding: 10px;
+}
+.other_says_word_container {
+  display: flex;
+}
 
+.other_says_words {
+  max-width: 600px;
+  height: auto;
+  padding: 10px 10px 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  background: #fff;
+  border-radius: 10px;
+  margin: 20px 10px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
 }
-.other_says_word_container{
-   display: flex;
-}
-
-.other_says_words{
-   max-width: 600px;
-   height: auto;
-   padding: 10px 10px 20px 10px;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   border-radius: 10px;
-   background: #fff;
-   border-radius: 10px;
-   margin: 20px 10px;
-   box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
-}
-.other_says_box_details{
+.other_says_box_details {
   font-size: 16px;
   font-weight: 300;
   margin: 20px 45px;
   line-height: 26px;
   color: var(--text-color-light);
 }
-.other_says_image{
-  width:60px ;
+.other_says_image {
+  width: 60px;
   height: 60px;
   position: relative;
 }
 
-.other_says_name{
+.other_says_name {
   font-size: 22px;
   font-weight: 600;
   color: var(--secondary-color);
-  
 }
 
 /****************Responsive****************/
-@media only screen and (max-width: 600px){
-/** hero section code */
-.herosection {
-  height: 550px;
-}
+@media only screen and (max-width: 600px) {
+  /** hero section code */
+  .herosection {
+    height: 550px;
+  }
 
-.childDiv:first-child p {
-  width: 100%;
-  font-size: 14px;
-}
+  .childDiv:first-child p {
+    width: 100%;
+    font-size: 14px;
+  }
 
-.herosection div:nth-child(2) {
-  display: none;
-}
+  .herosection div:nth-child(2) {
+    display: none;
+  }
 
+  /** how to apply css*/
+  .howto_head_box {
+    padding: 10px;
+  }
 
-/** how to apply css*/
-.howto_head_box {
-  padding: 10px;
-}
+  .howto_head_box h2::after {
+    top: -10%;
+  }
 
-.howto_head_box h2::after {
-  top: -10%;
-}
+  /** what other says */
+  .other_says_word_container {
+    flex-direction: column;
+  }
 
-/** what other says */
-.other_says_word_container{
-   flex-direction: column;
-}
-
-.other_says_box_details{
- font-size: 16px;
- font-weight: 500;
- margin: 20px 15px;
- line-height: 24px;
-}
-
-
+  .other_says_box_details {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 20px 15px;
+    line-height: 24px;
+  }
 }
