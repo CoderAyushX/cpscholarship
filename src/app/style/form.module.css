@@ -21,46 +21,48 @@
   background: var(--primary-color);
 }
 
-.form{
-    max-width: 900px;
-    padding: 10px;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
+.form {
+  max-width: 900px;
+  padding: 10px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
 }
-.form label, .form input, .form select{
-    display: block;
+.form label,
+.form input,
+.form select {
+  display: block;
 }
 
 .form .entry_box {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;    
-    margin-bottom: 20px;
-    flex-wrap: wrap;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .form .entry_box input {
-    width: 400px;
-    height: 45px;
-    border: 2px solid var(--primary-color);
-    border-radius: 8px;
-    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
-    margin-top: 5px;
-    padding: 5px 10px;
-    font-size: 16px;
+  width: 400px;
+  height: 45px;
+  border: 2px solid var(--primary-color);
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+  margin-top: 5px;
+  padding: 5px 10px;
+  font-size: 16px;
 }
-.form .entry_box select{
-    width: 400px;
-    height: 45px;
-    border: 2px solid var(--primary-color);
-    border-radius: 8px;
-    font-size: 16px;
-    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+.form .entry_box select {
+  width: 400px;
+  height: 45px;
+  border: 2px solid var(--primary-color);
+  border-radius: 8px;
+  font-size: 16px;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 }
 
-.form button{
- padding: 12px 45px;
+.form button {
+  padding: 12px 45px;
   background-color: var(--primary-color);
   color: var(--text-color-dark);
   text-decoration: none;
@@ -72,6 +74,34 @@
   margin-top: 20px;
 }
 
-.form .entry_box input:focus{
-    border-color: var(--primary-color);
+.form .entry_box input:focus {
+  border-color: var(--primary-color);
+}
+
+/****************Responsive****************/
+@media only screen and (max-width: 600px) {
+ 
+  .scholar_head h2::after {
+    top: -10%;
+
+  }
+
+
+
+
+  .form .entry_box input {
+    width: 100%;
+  
+  }
+  .form .entry_box select {
+    width: 100%;
+
+  }
+
+  .form button {
+    padding: 10px 45px;
+   
+  }
+
+ 
 }
