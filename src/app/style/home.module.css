@@ -146,7 +146,7 @@
 @media only screen and (max-width: 600px) {
   /** hero section code */
   .herosection {
-    height: 600px;
+    height: 580px;
   }
 
   .childDiv:first-child p {
