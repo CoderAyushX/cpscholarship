@@ -27,7 +27,7 @@ function page() {
             the path to success. <br />
             Enroll now and seize the opportunity to excel with us!
           </p>
-          <Link href="/apply" className={styles.apply_button}>
+          <Link href="scholarform" className={styles.apply_button}>
             Apply Now <FaArrowRight className={styles.icon} />
           </Link>
         </div>
