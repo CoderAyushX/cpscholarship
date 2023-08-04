@@ -19,7 +19,7 @@ const Header = () => {
       <Link href="/contact" className={styles.contact_us}>
           Contact us
         </Link>
-        <Link href="/apply" className={styles.apply_button}>
+        <Link href="scholarform" className={styles.apply_button}>
           Apply Now
         </Link>
       </div>
