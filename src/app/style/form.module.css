@@ -71,3 +71,7 @@
   cursor: pointer;
   margin-top: 20px;
 }
+
+.form .entry_box input:focus{
+    border-color: var(--primary-color);
+}
