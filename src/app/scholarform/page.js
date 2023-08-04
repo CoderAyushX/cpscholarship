@@ -69,7 +69,7 @@ const Scholarform = () => {
             />
           </label>
           <label>
-            Father's Name:
+            Father&apos;s Name:
             <input
               type="text"
               name="fathersName"
