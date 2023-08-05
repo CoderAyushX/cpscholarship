@@ -255,5 +255,6 @@
   }
   .program_item {
     width: 90vw;
+    margin: 10px 0;
   }
 }
