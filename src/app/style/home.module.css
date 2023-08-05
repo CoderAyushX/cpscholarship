@@ -1,4 +1,3 @@
-
 /** hero section code */
 .herosection {
   max-width: 1250px;
@@ -123,7 +122,7 @@
   background: #fff;
   border-radius: 10px;
   margin: 20px 10px;
-  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+  box-shadow: var(--primary-color) 0px 0px 0px 3px;
 }
 .other_says_box_details {
   font-size: 16px;
@@ -145,14 +144,13 @@
 }
 
 /* cp exam details */
-.program_item_div{
+.program_item_div {
   max-width: 1350px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   margin: auto;
   padding: 10px;
-
 }
 .program_item {
   display: flex;
@@ -172,7 +170,7 @@
   background-image: url(/shape-01.png);
   background-size: auto;
   background-position: center;
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   right: 0;
@@ -197,13 +195,12 @@
   background-color: #fff;
   color: #000;
 }
-.program_item .program__icon .icon{
+.program_item .program__icon .icon {
   width: 40px;
   height: 40px;
 }
 
-
-.program_item .head_p{
+.program_item .head_p {
   margin-left: 25px;
 }
 .program_item .head_p h5 {
@@ -215,7 +212,6 @@
   margin: 0;
   font-size: 14px;
 }
-
 
 /****************Responsive****************/
 @media only screen and (max-width: 600px) {

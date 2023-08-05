@@ -61,8 +61,8 @@ function page() {
           />
         </div>
       </div>
-     {/* program item zone */}
-     <div className={styles.howto_head_box}>
+      {/* program item zone */}
+      <div className={styles.howto_head_box}>
         <h2>CP Star Exam Details</h2>
       </div>
       <div className={styles.program_item_div}>
