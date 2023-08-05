@@ -2,7 +2,7 @@
 .herosection {
   max-width: 1250px;
   margin: auto;
-  height: 550px;
+  height: 650px;
   display: flex;
   padding: 0 10px;
 }
@@ -217,7 +217,7 @@
 @media only screen and (max-width: 600px) {
   /** hero section code */
   .herosection {
-    height: 480px;
+    height: 580px;
   }
 
   .childDiv:first-child p {
