@@ -129,20 +129,25 @@
   }
   
  
-  
+  .navbar .container_2 .nav_info li{
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+   
+  }
+  .navbar .container_2 .nav_info li{
+
+    font-size: 14px;
+
+   
+  }
   .navbar .container_2 .nav_info li div{
     display: flex;
     justify-content: center;
     align-items: center;
   }
   
-  .navbar .container_2 .nav_info li div .icon{
-    color: var(--primary-color);
-    width: 22px;
-    height: 22px;
-    margin-right: 10px;
-    position: relative;
-  }
+
   
   
   
