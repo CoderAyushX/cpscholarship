@@ -58,9 +58,10 @@
   margin: 40px 0;
   position: relative;
 }
-.herosection div:nth-child(2) .childDiv {
+.herosection div:nth-child(2) .image {
   width: 100%;
   height: 100%;
+  object-fit: contain;
 }
 
 /** how to apply css*/
