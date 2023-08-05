@@ -3,8 +3,17 @@ import Header from "./components/Header";
 import styles from "@/app/style/home.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import { FaArrowRight } from "react-icons/fa";
+import {
+  FaArrowRight,
+  FaUserCheck,
+  FaMoneyBill,
+  FaCalendarCheck,
+  FaBookReader,
+  FaHourglass,
+} from "react-icons/fa";
 import Howto from "./components/Howto";
+
+import ProgramItem from "./components/ProgramItem";
 function page() {
   return (
     <>
@@ -14,9 +23,9 @@ function page() {
         <Image
           src={"/banner.jpeg"}
           width={0}
-  height={0}
-  sizes="100vw"
-  style={{ width: '100%', height: 'auto' }}
+          height={0}
+          sizes="100vw"
+          style={{ width: "100%", height: "auto" }}
           alt="hero image"
         />
       </div>
@@ -51,6 +60,45 @@ function page() {
             alt="hero image"
           />
         </div>
+      </div>
+     {/* program item zone */}
+     <div className={styles.howto_head_box}>
+        <h2>CP Star Exam Details</h2>
+      </div>
+      <div className={styles.program_item_div}>
+        <ProgramItem
+          icon={<FaUserCheck className={styles.icon} />}
+          head="Eligibility"
+          desc="Class Vll, Vlll, lX, X, XI, XII Studying Students"
+        />
+        <ProgramItem
+          icon={<FaMoneyBill className={styles.icon} />}
+          head="Exam Fee"
+          desc="Free"
+        />
+        <ProgramItem
+          icon={<FaCalendarCheck className={styles.icon} />}
+          head="Exam Date"
+          desc="1st October & 29th October
+          2023"
+        />
+        <ProgramItem
+          icon={<FaBookReader className={styles.icon} />}
+          head="Syllabus"
+          desc="Current Studying class of student"
+        />
+        <ProgramItem
+          icon={<FaHourglass className={styles.icon} />}
+          head="Offline Exam Timing & Duration"
+          desc="11:00 AM - 12:00"
+          desc2="NOON Duration: 01 Hour"
+        />
+        <ProgramItem
+          icon={<FaCalendarCheck className={styles.icon} />}
+          head="Last Date For Registration"
+          desc="Phase 1 : 27th September 2023"
+          desc2="Phase 2 : 25th October 2023"
+        />
       </div>
       {/* How to enroll code */}
       <div className={styles.howto_head_box}>

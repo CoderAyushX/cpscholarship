@@ -144,6 +144,79 @@
   color: var(--secondary-color);
 }
 
+/* cp exam details */
+.program_item_div{
+  max-width: 1350px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: auto;
+  padding: 10px;
+
+}
+.program_item {
+  display: flex;
+  width: 420px;
+  min-height: 154px;
+  align-items: center;
+  background-color: var(--primary-color);
+  border-radius: 15px;
+  padding: 20px 25px;
+  margin: 15px 0;
+  color: #fff;
+  position: relative;
+}
+
+.program_item:after {
+  opacity: 0.2;
+  background-image: url(/shape-01.png);
+  background-size: auto;
+  background-position: center;
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  transition: all 0.5s;
+}
+
+.program_item:hover:after {
+  transition: all 0.5s;
+  background-image: url(/shape-01.png);
+  background-position: 54% center;
+}
+
+.program_item .program__icon {
+  text-align: center;
+  width: 80px;
+  height: 80px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0px 0px 0px 10px #ffffff3d;
+  background-color: #fff;
+  color: #000;
+}
+.program_item .program__icon .icon{
+  width: 40px;
+  height: 40px;
+}
+
+
+.program_item .head_p{
+  margin-left: 25px;
+}
+.program_item .head_p h5 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.program_item .head_p p {
+  margin: 0;
+  font-size: 14px;
+}
+
+
 /****************Responsive****************/
 @media only screen and (max-width: 600px) {
   /** hero section code */
@@ -179,5 +252,8 @@
     font-weight: 500;
     margin: 20px 15px;
     line-height: 24px;
+  }
+  .program_item {
+    width: 90vw;
   }
 }
