@@ -9,6 +9,17 @@ function page() {
   return (
     <>
       <Header />
+      {/* banner image */}
+      <div className={styles.banner_img}>
+        <Image
+          src={"/banner.jpeg"}
+          width={0}
+  height={0}
+  sizes="100vw"
+  style={{ width: '100%', height: 'auto' }}
+          alt="hero image"
+        />
+      </div>
       {/*This is the hero section of front page*/}
       <div className={styles.herosection}>
         {/* text div */}
