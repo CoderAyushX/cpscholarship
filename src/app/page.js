@@ -126,46 +126,11 @@ function page() {
         title="Get selected! For the scholarship programme"
         img="/message.png"
       />
-      {/* Testimonial by students */}
-      <div className={styles.howto_head_box}>
-        <h2>Testimonial by students</h2>
-      </div>
-
-      <div className={styles.other_says_box}>
-        <div className={styles.other_says_word_container}>
-          <div className={styles.other_says_words}>
-            <div className={styles.other_says_image}>
-              <Image src="/qoute.png" alt="qoute-sign" layout="fill" />
-            </div>
-            <p className={styles.other_says_box_details}>
-              Career Point Coaching Center&apos expert faculty and encouraging
-              atmosphere empowered me to excel academically. Their personalized
-              approach and continuous support helped me build confidence in my
-              abilities. I wholeheartedly recommend Career Point to all students
-              striving for success.
-            </p>
-            <hr />
-            <p className={styles.other_says_name}>Ayush Kumar</p>
-          </div>
-
-          <div className={styles.other_says_words}>
-            <div className={styles.other_says_image}>
-              <Image src="/qoute.png" alt="qoute-sign" layout="fill" />
-            </div>
-
-            <p className={styles.other_says_box_details}>
-              Career Point Coaching Center&apos dedicated instructors and
-              motivating environment played a crucial role in my academic
-              achievements. The personalized attention and guidance helped me
-              reach my full potential. I confidently recommend Career Point to
-              every student seeking excellence.
-            </p>
-            <p className={styles.other_says_name}>Shubham kumar</p>
-          </div>
-        </div>
-      </div>
 
       {/* question break table */}
+      <div className={styles.howto_head_box}>
+        <h2>Question Breakup</h2>
+      </div>
       <div className={styles.question_break_box}>
         <table className={styles.question_break}>
           <thead>
@@ -265,7 +230,9 @@ function page() {
       </div>
 
       {/* scholarship table */}
-
+      <div className={styles.howto_head_box}>
+        <h2>Scholarship Table</h2>
+      </div>
       <div className={styles.question_break_box}>
         <table className={styles.question_break}>
           <thead>
@@ -328,6 +295,44 @@ function page() {
             </tr>
           </tbody>
         </table>
+      </div>
+      {/* Testimonial by students */}
+      <div className={styles.howto_head_box}>
+        <h2>Testimonial by students</h2>
+      </div>
+
+      <div className={styles.other_says_box}>
+        <div className={styles.other_says_word_container}>
+          <div className={styles.other_says_words}>
+            <div className={styles.other_says_image}>
+              <Image src="/qoute.png" alt="qoute-sign" layout="fill" />
+            </div>
+            <p className={styles.other_says_box_details}>
+              Career Point Coaching Center&apos expert faculty and encouraging
+              atmosphere empowered me to excel academically. Their personalized
+              approach and continuous support helped me build confidence in my
+              abilities. I wholeheartedly recommend Career Point to all students
+              striving for success.
+            </p>
+            <hr />
+            <p className={styles.other_says_name}>Ayush Kumar</p>
+          </div>
+
+          <div className={styles.other_says_words}>
+            <div className={styles.other_says_image}>
+              <Image src="/qoute.png" alt="qoute-sign" layout="fill" />
+            </div>
+
+            <p className={styles.other_says_box_details}>
+              Career Point Coaching Center&apos dedicated instructors and
+              motivating environment played a crucial role in my academic
+              achievements. The personalized attention and guidance helped me
+              reach my full potential. I confidently recommend Career Point to
+              every student seeking excellence.
+            </p>
+            <p className={styles.other_says_name}>Shubham kumar</p>
+          </div>
+        </div>
       </div>
     </>
   );
