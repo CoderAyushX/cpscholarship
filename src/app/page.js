@@ -263,6 +263,78 @@ function page() {
         </tbody>
       </table>
       </div> 
+
+
+      {/* scholarship table */}
+
+
+      <div styleName={styles.question_break_box}>     
+      <table className={styles.question_break}>
+
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>CP Scholar Rank</th>
+        <th>Registration Fees</th>
+        <th>Tuition Fees</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <tr>
+        <td>A</td>
+        <td>Rank 1 to 5</td>
+        <td>100% waiver</td>
+        <td>100% waiver</td>
+      </tr>
+      <tr>
+        <td>B</td>
+        <td>Rank 6 to 10</td>
+        <td>100% waiver</td>
+        <td>90% waiver</td>
+      </tr>
+      <tr>
+        <td>C</td>
+        <td>Rank 11 to 25</td>
+        <td>100% waiver</td>
+        <td>75% waiver</td>
+      </tr>
+      <tr>
+        <td>D</td>
+        <td>Rank 26 to 50</td>
+        <td>Chargeable</td>
+        <td>70% waiver</td>
+      </tr>
+      <tr>
+        <td>E</td>
+        <td>Rank 51 to 100</td>
+        <td>Chargeable</td>
+        <td>50% waiver</td>
+      </tr>
+      <tr>
+        <td>F</td>
+        <td>Rank 101 to 500</td>
+        <td>Chargeable</td>
+        <td>40% waiver</td>
+      </tr>
+      <tr>
+        <td>G</td>
+        <td>Rank 501 to 1000</td>
+        <td>Chargeable</td>
+        <td>30% waiver</td>
+      </tr>
+      <tr>
+        <td>H</td>
+        <td>Rank 1001 to 2000</td>
+        <td>Chargeable</td>
+        <td>20% waiver</td>
+      </tr>
+    </tbody>
+
+  </table>
+</div>
+
     </>
   );
 }

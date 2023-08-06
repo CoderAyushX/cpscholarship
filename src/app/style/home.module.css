@@ -215,18 +215,17 @@
 
 /* Question_break **/
 .question_break_box{
+  max-width: 1100px; /* Use max-width instead of width for responsiveness */
   width: 100%;
-  overflow-x: hidden;
+  overflow-x: auto; 
   padding: 10px;
 }
 
-/* Apply minimal styles to the table */
+
 .question_break {
   border-collapse: collapse;
   margin: auto;
-  max-width: 1100px; /* Use max-width instead of width for responsiveness */
-  width: 100%;
-  overflow-x: auto; /* Set width to 100% */
+  
 }
 
 .question_break th {
