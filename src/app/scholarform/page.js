@@ -184,6 +184,12 @@ const Scholarform = () => {
 
         <button type="submit">Submit</button>
       </form>
+
+      <footer className={styles.footer}>
+        <p>
+        Copyright@Careerpoint. All rights reserved
+        </p>
+     </footer>
     </>
   );
 };

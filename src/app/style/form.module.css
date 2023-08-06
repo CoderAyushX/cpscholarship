@@ -81,6 +81,17 @@
 .form .entry_box select:focus {
   border-color: var(--primary-color);
 }
+
+/* footer style */
+.footer{
+  background: var(--primary-color);
+  color: var(--text-color-dark);
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 35px;
+}
 /****************Responsive****************/
 @media only screen and (max-width: 600px) {
   .scholar_head h2::after {
