@@ -166,175 +166,169 @@ function page() {
       </div>
 
       {/* question break table */}
-      <div styleName={styles.question_break_box}>     
-      <table className={styles.question_break}>
-        <thead>
-          <tr>
-            <th colspan="2"> Exam Date : 01 October &amp; 29 October 2023</th>
-            <th colspan="2" rowspan="1">
-              For CP Study Center Network
-            </th>
-            <th>Question Paper Pattern</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td colspan="1" rowspan="4">
-              <b>Class 7th to 10th</b>
-            </td>
-            <td>Science</td>
-            <td colspan="2" rowspan="1">
-              24 Ques (Phy:8, Chem:8, Bio:8) Duration
-            </td>
-            <td>1 Hour</td>
-          </tr>
-          <tr>
-            <td>Maths</td>
-            <td>16 Ques.</td>
-            <td>Total Marks</td>
-            <td>100</td>
-          </tr>
-          <tr>
-            <td>MAT</td>
-            <td>10 Ques.</td>
-            <td>Marks/Question</td>
-            <td>2</td>
-          </tr>
-          <tr>
-            <td>Total Questions</td>
-            <td>50 Ques.</td>
-            <td>Negative Marking</td>
-            <td>No</td>
-          </tr>
-          <tr>
-            <td colspan="1" rowspan="4">
-              <b>Class 11th and 12th (PCM)</b>
-            </td>
-            <td>Physics</td>
-            <td>10 Ques.</td>
-            <td>Duration</td>
-            <td>1 Hour</td>
-          </tr>
-          <tr>
-            <td>Chemistry</td>
-            <td>10 Ques.</td>
-            <td>Total Marking</td>
-            <td>120</td>
-          </tr>
-          <tr>
-            <td>Maths</td>
-            <td>10 Ques.</td>
-            <td>Marks/Question</td>
-            <td>4</td>
-          </tr>
-          <tr>
-            <td>Total Questions</td>
-            <td>30 Ques.</td>
-            <td>Negative Marking</td>
-            <td>No</td>
-          </tr>
-          <tr>
-            <td colspan="1" rowspan="4">
-              <b>Class 11th and 12th (PCB)</b>
-            </td>
-            <td>Physics</td>
-            <td>10 Ques.</td>
-            <td>Duration</td>
-            <td>1 Hour</td>
-          </tr>
-          <tr>
-            <td>Chemistry</td>
-            <td>10 Ques.</td>
-            <td>Total Marking</td>
-            <td>160</td>
-          </tr>
-          <tr>
-            <td>Biology</td>
-            <td>20 Ques.</td>
-            <td>Marks/Question</td>
-            <td>4</td>
-          </tr>
-          <tr>
-            <td>Total Questions</td>
-            <td>40 Ques.</td>
-            <td>Negative Marking</td>
-            <td>No</td>
-          </tr>
-        </tbody>
-      </table>
-      </div> 
-
+      <div styleName={styles.question_break_box}>
+        <table className={styles.question_break}>
+          <thead>
+            <tr>
+              <th colspan="2"> Exam Date : 01 October &amp; 29 October 2023</th>
+              <th colspan="2" rowspan="1">
+                For CP Study Center Network
+              </th>
+              <th>Question Paper Pattern</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="1" rowspan="4">
+                <b>Class 7th to 10th</b>
+              </td>
+              <td>Science</td>
+              <td colspan="2" rowspan="1">
+                24 Ques (Phy:8, Chem:8, Bio:8) Duration
+              </td>
+              <td>1 Hour</td>
+            </tr>
+            <tr>
+              <td>Maths</td>
+              <td>16 Ques.</td>
+              <td>Total Marks</td>
+              <td>100</td>
+            </tr>
+            <tr>
+              <td>MAT</td>
+              <td>10 Ques.</td>
+              <td>Marks/Question</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>Total Questions</td>
+              <td>50 Ques.</td>
+              <td>Negative Marking</td>
+              <td>No</td>
+            </tr>
+            <tr>
+              <td colspan="1" rowspan="4">
+                <b>Class 11th and 12th (PCM)</b>
+              </td>
+              <td>Physics</td>
+              <td>10 Ques.</td>
+              <td>Duration</td>
+              <td>1 Hour</td>
+            </tr>
+            <tr>
+              <td>Chemistry</td>
+              <td>10 Ques.</td>
+              <td>Total Marking</td>
+              <td>120</td>
+            </tr>
+            <tr>
+              <td>Maths</td>
+              <td>10 Ques.</td>
+              <td>Marks/Question</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>Total Questions</td>
+              <td>30 Ques.</td>
+              <td>Negative Marking</td>
+              <td>No</td>
+            </tr>
+            <tr>
+              <td colspan="1" rowspan="4">
+                <b>Class 11th and 12th (PCB)</b>
+              </td>
+              <td>Physics</td>
+              <td>10 Ques.</td>
+              <td>Duration</td>
+              <td>1 Hour</td>
+            </tr>
+            <tr>
+              <td>Chemistry</td>
+              <td>10 Ques.</td>
+              <td>Total Marking</td>
+              <td>160</td>
+            </tr>
+            <tr>
+              <td>Biology</td>
+              <td>20 Ques.</td>
+              <td>Marks/Question</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>Total Questions</td>
+              <td>40 Ques.</td>
+              <td>Negative Marking</td>
+              <td>No</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       {/* scholarship table */}
 
+      <div styleName={styles.question_break_box}>
+        <table className={styles.question_break}>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>CP Scholar Rank</th>
+              <th>Registration Fees</th>
+              <th>Tuition Fees</th>
+            </tr>
+          </thead>
 
-      <div styleName={styles.question_break_box}>     
-      <table className={styles.question_break}>
-
-    <thead>
-      <tr>
-        <th>Category</th>
-        <th>CP Scholar Rank</th>
-        <th>Registration Fees</th>
-        <th>Tuition Fees</th>
-      </tr>
-    </thead>
-
-    <tbody>
-
-      <tr>
-        <td>A</td>
-        <td>Rank 1 to 5</td>
-        <td>100% waiver</td>
-        <td>100% waiver</td>
-      </tr>
-      <tr>
-        <td>B</td>
-        <td>Rank 6 to 10</td>
-        <td>100% waiver</td>
-        <td>90% waiver</td>
-      </tr>
-      <tr>
-        <td>C</td>
-        <td>Rank 11 to 25</td>
-        <td>100% waiver</td>
-        <td>75% waiver</td>
-      </tr>
-      <tr>
-        <td>D</td>
-        <td>Rank 26 to 50</td>
-        <td>Chargeable</td>
-        <td>70% waiver</td>
-      </tr>
-      <tr>
-        <td>E</td>
-        <td>Rank 51 to 100</td>
-        <td>Chargeable</td>
-        <td>50% waiver</td>
-      </tr>
-      <tr>
-        <td>F</td>
-        <td>Rank 101 to 500</td>
-        <td>Chargeable</td>
-        <td>40% waiver</td>
-      </tr>
-      <tr>
-        <td>G</td>
-        <td>Rank 501 to 1000</td>
-        <td>Chargeable</td>
-        <td>30% waiver</td>
-      </tr>
-      <tr>
-        <td>H</td>
-        <td>Rank 1001 to 2000</td>
-        <td>Chargeable</td>
-        <td>20% waiver</td>
-      </tr>
-    </tbody>
-
-  </table>
-</div>
-
+          <tbody>
+            <tr>
+              <td>A</td>
+              <td>Rank 1 to 5</td>
+              <td>100% waiver</td>
+              <td>100% waiver</td>
+            </tr>
+            <tr>
+              <td>B</td>
+              <td>Rank 6 to 10</td>
+              <td>100% waiver</td>
+              <td>90% waiver</td>
+            </tr>
+            <tr>
+              <td>C</td>
+              <td>Rank 11 to 25</td>
+              <td>100% waiver</td>
+              <td>75% waiver</td>
+            </tr>
+            <tr>
+              <td>D</td>
+              <td>Rank 26 to 50</td>
+              <td>Chargeable</td>
+              <td>70% waiver</td>
+            </tr>
+            <tr>
+              <td>E</td>
+              <td>Rank 51 to 100</td>
+              <td>Chargeable</td>
+              <td>50% waiver</td>
+            </tr>
+            <tr>
+              <td>F</td>
+              <td>Rank 101 to 500</td>
+              <td>Chargeable</td>
+              <td>40% waiver</td>
+            </tr>
+            <tr>
+              <td>G</td>
+              <td>Rank 501 to 1000</td>
+              <td>Chargeable</td>
+              <td>30% waiver</td>
+            </tr>
+            <tr>
+              <td>H</td>
+              <td>Rank 1001 to 2000</td>
+              <td>Chargeable</td>
+              <td>20% waiver</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </>
   );
 }
