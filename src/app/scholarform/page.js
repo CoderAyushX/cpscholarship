@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import styles from "@/app/style/form.module.css";
+import Header from "../components/Header";
 
 const Scholarform = () => {
   const [formData, setFormData] = useState({
@@ -33,6 +34,7 @@ const Scholarform = () => {
 
   return (
     <>
+    <Header/>
       <div className={styles.scholar_head}>
         <h2>Scholarship Form 2023</h2>
       </div>
