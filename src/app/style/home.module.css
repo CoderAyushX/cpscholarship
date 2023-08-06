@@ -216,6 +216,8 @@
 /* Question_break **/
 .question_break_box{
   width: 100%;
+  overflow-x: hidden;
+  padding: 10px;
 }
 
 /* Apply minimal styles to the table */
