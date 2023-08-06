@@ -305,7 +305,7 @@ function page() {
         <div className={styles.other_says_word_container}>
           <div className={styles.other_says_words}>
             <div className={styles.other_says_image}>
-              <Image src="/qoute.png" alt="qoute-sign" layout="fill" />
+              <Image src="/qoutes.png" alt="qoute-sign" layout="fill" />
             </div>
             <p className={styles.other_says_box_details}>
               Career Point Coaching Center&apos expert faculty and encouraging
@@ -320,7 +320,7 @@ function page() {
 
           <div className={styles.other_says_words}>
             <div className={styles.other_says_image}>
-              <Image src="/qoute.png" alt="qoute-sign" layout="fill" />
+              <Image src="/qoutes.png" alt="qoute-sign" layout="fill" />
             </div>
 
             <p className={styles.other_says_box_details}>
