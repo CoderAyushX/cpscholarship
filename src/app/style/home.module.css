@@ -216,12 +216,12 @@
 /* Question_break **/
 .question_break_box {
   width: 100%;
+  overflow-x: auto;
   padding: 10px;
 }
 
 .question_break {
   border-collapse: collapse;
-  overflow-x: auto;
   margin: auto;
 }
 
