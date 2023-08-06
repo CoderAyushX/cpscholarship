@@ -164,6 +164,105 @@ function page() {
           </div>
         </div>
       </div>
+
+      {/* question break table */}
+      <div styleName={styles.question_break_box}>     
+      <table className={styles.question_break}>
+        <thead>
+          <tr>
+            <th colspan="2"> Exam Date : 01 October &amp; 29 October 2023</th>
+            <th colspan="2" rowspan="1">
+              For CP Study Center Network
+            </th>
+            <th>Question Paper Pattern</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="1" rowspan="4">
+              <b>Class 7th to 10th</b>
+            </td>
+            <td>Science</td>
+            <td colspan="2" rowspan="1">
+              24 Ques (Phy:8, Chem:8, Bio:8) Duration
+            </td>
+            <td>1 Hour</td>
+          </tr>
+          <tr>
+            <td>Maths</td>
+            <td>16 Ques.</td>
+            <td>Total Marks</td>
+            <td>100</td>
+          </tr>
+          <tr>
+            <td>MAT</td>
+            <td>10 Ques.</td>
+            <td>Marks/Question</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>Total Questions</td>
+            <td>50 Ques.</td>
+            <td>Negative Marking</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td colspan="1" rowspan="4">
+              <b>Class 11th and 12th (PCM)</b>
+            </td>
+            <td>Physics</td>
+            <td>10 Ques.</td>
+            <td>Duration</td>
+            <td>1 Hour</td>
+          </tr>
+          <tr>
+            <td>Chemistry</td>
+            <td>10 Ques.</td>
+            <td>Total Marking</td>
+            <td>120</td>
+          </tr>
+          <tr>
+            <td>Maths</td>
+            <td>10 Ques.</td>
+            <td>Marks/Question</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>Total Questions</td>
+            <td>30 Ques.</td>
+            <td>Negative Marking</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td colspan="1" rowspan="4">
+              <b>Class 11th and 12th (PCB)</b>
+            </td>
+            <td>Physics</td>
+            <td>10 Ques.</td>
+            <td>Duration</td>
+            <td>1 Hour</td>
+          </tr>
+          <tr>
+            <td>Chemistry</td>
+            <td>10 Ques.</td>
+            <td>Total Marking</td>
+            <td>160</td>
+          </tr>
+          <tr>
+            <td>Biology</td>
+            <td>20 Ques.</td>
+            <td>Marks/Question</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>Total Questions</td>
+            <td>40 Ques.</td>
+            <td>Negative Marking</td>
+            <td>No</td>
+          </tr>
+        </tbody>
+      </table>
+      </div> 
     </>
   );
 }
