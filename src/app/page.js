@@ -66,7 +66,7 @@ function page() {
       <div className={styles.howto_head_box}>
         <h2>CP Star Exam Benifits</h2>
       </div>
-      <ExamBenifits/>
+      <ExamBenifits />
       {/* program item zone */}
       <div className={styles.howto_head_box}>
         <h2>CP Star Exam Details</h2>
@@ -132,7 +132,86 @@ function page() {
         title="Get selected! For the scholarship programme"
         img="/message.png"
       />
+      {/* reward based on air */}
+      <div className={styles.howto_head_box}>
+        <h2>Rewards Based On AIR</h2>
+      </div>
+      <div className={styles.air_box}>
+        
+        <div className={styles.air}>
+          <div className={styles.air_table}>
+            <table>
+              <thead>
+                <tr>
+                  <th>RANK</th>
+                  <th>Class 7th</th>
+                  <th>Class 8th</th>
+                  <th>Class 9th</th>
+                  <th>Class 10th</th>
+                  <th>Class 11th</th>
+                  <th>Class 12th</th>
+                </tr>
+              </thead>
 
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Laptop</td>
+                  <td>Laptop</td>
+                  <td>Laptop</td>
+                  <td>Laptop</td>
+                  <td>Laptop</td>
+                  <td>Laptop</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Tab</td>
+                  <td>Tab</td>
+                  <td>Tab</td>
+                  <td>Tab</td>
+                  <td>Tab</td>
+                  <td>Tab</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Smart Phone</td>
+                  <td>Smart Phone</td>
+                  <td>Smart Phone</td>
+                  <td>Smart Phone</td>
+                  <td>Smart Phone</td>
+                  <td>Smart Phone</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div className={styles.air_prize}>
+            <div className={styles.image}>
+              <Image
+                src="/tab.png"
+                alt="arrow"
+                layout="fill"
+                className={`${styles.down_arrow} ${styles.flip_horizontal}`}
+              />
+            </div>
+            <div className={styles.image}>
+              <Image
+                src="/lap.png"
+                alt="arrow"
+                layout="fill"
+                className={`${styles.down_arrow} ${styles.flip_horizontal}`}
+              />
+            </div>
+            <div className={styles.image}>
+              <Image
+                src="/mobile.png"
+                alt="arrow"
+                layout="fill"
+                className={`${styles.down_arrow} ${styles.flip_horizontal}`}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
       {/* question break table */}
       <div className={styles.howto_head_box}>
         <h2>Question Breakup</h2>

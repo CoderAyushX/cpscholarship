@@ -242,7 +242,59 @@
   background: #e1edf8;
   vertical-align: top; /* Use "top" instead of "text-top" */
 }
+/* reward for air ranker */
+.air_box{
+  width: 100%;
+  padding: 50px 10px;
+  background: #e1edf8;
 
+}
+.air{
+  max-width: 1350px;
+  margin: auto;
+  display: flex;
+}
+
+.air_table{
+  width: 58%;
+  overflow-x: auto;
+}
+.air_table table{
+  border-collapse: collapse;
+  margin: auto;
+}
+.air_table table th {
+  background-color: var(--primary-color);
+  color: var(--text-color-dark);
+  font-size: 16px;
+  padding: 16px 28px;
+  text-align: left;
+}
+
+.air_table table td {
+  border-bottom: 1px solid #ccc;
+  padding: 16px 28px;
+  font-size: 16px;
+  text-align: left;
+  background: var( --background-color);
+  vertical-align: top; /* Use "top" instead of "text-top" */
+}
+
+.air_prize{
+  width: 42%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.air_prize .image{
+  height: 160px;
+  width: 160px;
+  position: relative;
+}
+
+.air_prize .image:nth-child(2){
+  align-self: start;
+}
 /****************Responsive****************/
 @media only screen and (max-width: 600px) {
   /** hero section code */
@@ -285,8 +337,52 @@
   }
 
   .question_break th,
-  .question_break td {
+  .question_break td ,
+  .air_table table td,
+  .air_table table th{
     font-size: 14px;
     padding: 10px 15px;
+  }
+
+  .air{
+    flex-direction: column;
+  }
+  
+  .air_table{
+    width: 100%;
+    overflow-x: auto;
+  }
+  .air_table table{
+    border-collapse: collapse;
+    margin: auto;
+  }
+  .air_table table th {
+    background-color: var(--primary-color);
+    color: var(--text-color-dark);
+    font-size: 16px;
+    padding: 16px 28px;
+    text-align: left;
+  }
+  
+  .air_table table td {
+    border-bottom: 1px solid #ccc;
+    padding: 16px 28px;
+    font-size: 16px;
+    text-align: left;
+    background: var( --background-color);
+    vertical-align: top; /* Use "top" instead of "text-top" */
+  }
+  
+  .air_prize{
+    width: 100%;
+    margin-top: 40px;
+  }
+  .air_prize .image{
+    height: 120px;
+    width: 120px;
+  }
+  
+  .air_prize .image:nth-child(2){
+    align-self: normal;
   }
 }
