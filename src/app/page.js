@@ -137,7 +137,6 @@ function page() {
         <h2>Rewards Based On AIR</h2>
       </div>
       <div className={styles.air_box}>
-        
         <div className={styles.air}>
           <div className={styles.air_table}>
             <table>
