@@ -217,7 +217,7 @@
 .question_break_box{
   max-width: 1100px; /* Use max-width instead of width for responsiveness */
   width: 100%;
-  overflow-x: scroll; 
+  overflow-x: auto; 
   padding: 10px;
 }
 
