@@ -30,6 +30,7 @@ function page() {
           alt="hero image"
         />
       </div>
+
       {/*This is the hero section of front page*/}
       <div className={styles.herosection}>
         {/* text div */}
@@ -62,11 +63,15 @@ function page() {
           />
         </div>
       </div>
+
+
       {/* exam benifits */}
       <div className={styles.howto_head_box}>
         <h2>CP Star Exam Benifits</h2>
       </div>
       <ExamBenifits />
+
+
       {/* program item zone */}
       <div className={styles.howto_head_box}>
         <h2>CP Star Exam Details</h2>
@@ -106,6 +111,8 @@ function page() {
           desc2="Phase 2 : 25th October 2023"
         />
       </div>
+
+
       {/* How to enroll code */}
       <div className={styles.howto_head_box}>
         <h2>How To Enroll For Scholarship</h2>
@@ -380,11 +387,12 @@ function page() {
           </tbody>
         </table>
       </div>
+
+
       {/* Testimonial by students */}
       <div className={styles.howto_head_box}>
         <h2>Testimonial by students</h2>
       </div>
-
       <div className={styles.other_says_box}>
         <div className={styles.other_says_word_container}>
           <div className={styles.other_says_words}>
@@ -418,6 +426,12 @@ function page() {
           </div>
         </div>
       </div>
+
+     <footer className={styles.footer}>
+        <p>
+        Copyright@Careerpoint. All rights reserved
+        </p>
+     </footer>
     </>
   );
 }

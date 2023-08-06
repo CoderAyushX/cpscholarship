@@ -38,9 +38,7 @@
   /* Warning Color */
   --warning-color: #ffc107;
 }
-html {
-  font-family: var(--font-poppins);
-}
+
 body {
   background: var(--background-color);
 }
