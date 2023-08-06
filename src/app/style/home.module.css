@@ -122,7 +122,7 @@
   background: #fff;
   border-radius: 10px;
   margin: 20px 10px;
-  box-shadow: var(--primary-color) 0px 0px 0px 3px;
+  box-shadow: #e1edf8 0px 0px 0px 3px;
 }
 .other_says_box_details {
   font-size: 16px;
