@@ -166,7 +166,7 @@ function page() {
       </div>
 
       {/* question break table */}
-      <div styleName={styles.question_break_box}>
+      <div className={styles.question_break_box}>
         <table className={styles.question_break}>
           <thead>
             <tr>
@@ -266,7 +266,7 @@ function page() {
 
       {/* scholarship table */}
 
-      <div styleName={styles.question_break_box}>
+      <div className={styles.question_break_box}>
         <table className={styles.question_break}>
           <thead>
             <tr>
