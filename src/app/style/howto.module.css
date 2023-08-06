@@ -33,22 +33,19 @@
   position: relative;
 }
 
-/* Styles for the image within the second div */
-/* .howto_box div:last-child img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  } */
+
 
 /****************Responsive****************/
 @media only screen and (max-width: 600px) {
   /* Styles for the parent div */
   .howto_box {
-    padding: 0 25px;
+    padding: 0 15px;
+    margin: 20px 10px;
   }
 
   /* Styles for the h2 and p tags within the first div */
   .howto_box div:first-child h2 {
     font-size: 18px;
   }
+
 }
