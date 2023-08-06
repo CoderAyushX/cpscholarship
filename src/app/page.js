@@ -14,6 +14,7 @@ import {
 import Howto from "./components/Howto";
 
 import ProgramItem from "./components/ProgramItem";
+import ExamBenifits from "./components/ExamBenifits";
 function page() {
   return (
     <>
@@ -61,6 +62,11 @@ function page() {
           />
         </div>
       </div>
+      {/* exam benifits */}
+      <div className={styles.howto_head_box}>
+        <h2>CP Star Exam Benifits</h2>
+      </div>
+      <ExamBenifits/>
       {/* program item zone */}
       <div className={styles.howto_head_box}>
         <h2>CP Star Exam Details</h2>
