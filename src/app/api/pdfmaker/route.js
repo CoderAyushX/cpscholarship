@@ -2,7 +2,7 @@ import { connectionStr } from "@/app/database/dbconnect";
 import mongoose from "mongoose";
 import { NextResponse } from "next/server";
 import { Students } from "@/app/database/module/scholarshipForm";
-import puppeteer from "puppeteer";
+import puppeteer from "puppeteer-core";
 import Document from "./document";
 
 mongoose
