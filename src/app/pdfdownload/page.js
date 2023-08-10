@@ -7,7 +7,11 @@ import Image from "next/image";
 import axios from "axios";
 import { useSearchParams } from "next/navigation";
 import { save } from "save-file";
-export default function pdFDownload(props) {
+
+
+
+
+const PdFDownload= () => {
   const [isClicked, setIsClicked] = useState(false);
   const searchParams = useSearchParams();
 
@@ -61,3 +65,5 @@ export default function pdFDownload(props) {
     </>
   );
 }
+
+export default PdFDownload;
