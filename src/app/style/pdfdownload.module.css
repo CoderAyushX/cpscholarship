@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.content {
+  text-align: center;
+}
+
+.imageWrapper {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.downloadButton {
+  padding: 12px 45px;
+  background-color: var(--primary-color);
+  color: var(--text-color-dark);
+  text-decoration: none;
+  border-radius: 4px;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+}
+/* footer style */
+.footer {
+  background: var(--primary-color);
+  color: var(--text-color-dark);
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 35px;
+}

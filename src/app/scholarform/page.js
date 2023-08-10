@@ -3,8 +3,14 @@
 import React, { useState } from "react";
 import styles from "@/app/style/form.module.css";
 import Header from "../components/Header";
+import axios from "axios";
+import { useRouter } from "next/navigation";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Scholarform = () => {
+  const router = useRouter();
+  const [isClicked, setIsClicked] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -23,18 +29,36 @@ const Scholarform = () => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
       ...prevState,
-      [name]: value,
+      [name]: value.trim(),
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
+    setIsClicked(!isClicked);
     e.preventDefault();
-    console.log(formData);
-  };
+    try {
+      const response = await axios.post("api/studentform", {
+        data: formData,
+      });
+     
+      console.log("response:", response);
 
+      if (response.status === 201 ) {
+        router.push( `/pdfdownload?rollNo=${response.data.rollNo}`);
+      } else {
+        toast.error("Something went wrong");
+        console.error("Form submission failed.");
+      }
+    } catch (error) {
+      console.log("Error posting data:", error);
+    }
+    setTimeout(() => {
+    setIsClicked(false); // Reset loading state
+  }, 1000);
+  };
   return (
     <>
-    <Header/>
+      <Header />
       <div className={styles.scholar_head}>
         <h2>Scholarship Form 2023</h2>
       </div>
@@ -47,6 +71,7 @@ const Scholarform = () => {
               name="firstName"
               value={formData.firstName}
               onChange={handleChange}
+              required
             />
           </label>
 
@@ -57,6 +82,7 @@ const Scholarform = () => {
               name="lastName"
               value={formData.lastName}
               onChange={handleChange}
+              required
             />
           </label>
         </div>
@@ -68,6 +94,7 @@ const Scholarform = () => {
               name="age"
               value={formData.age}
               onChange={handleChange}
+              required
             />
           </label>
           <label>
@@ -77,6 +104,7 @@ const Scholarform = () => {
               name="fathersName"
               value={formData.fathersName}
               onChange={handleChange}
+              required
             />
           </label>
         </div>
@@ -88,6 +116,7 @@ const Scholarform = () => {
               name="mobileNo"
               value={formData.mobileNo}
               onChange={handleChange}
+              required
             />
           </label>
 
@@ -108,6 +137,7 @@ const Scholarform = () => {
               name="selectedClass"
               value={formData.selectedClass}
               onChange={handleChange}
+              required
             >
               <option value="">Select Class</option>
               <option value="Class VIth">Class VIth</option>
@@ -133,7 +163,6 @@ const Scholarform = () => {
               <option value="70-80%">70-80%</option>
               <option value="60-70%">60-70%</option>
               <option value=">60%">below 60%</option>
-              
             </select>
           </label>
         </div>
@@ -144,6 +173,7 @@ const Scholarform = () => {
               name="selectedTestDate"
               value={formData.selectedTestDate}
               onChange={handleChange}
+              required
             >
               <option value="">Select Test Date</option>
               <option value="2023-08-10">August 10, 2023</option>
@@ -158,6 +188,7 @@ const Scholarform = () => {
               name="selectedTimeSlot"
               value={formData.selectedTimeSlot}
               onChange={handleChange}
+              required
             >
               <option value="">Select Time Slot</option>
               <option value="09:00 AM">09:00 AM</option>
@@ -173,6 +204,7 @@ const Scholarform = () => {
               name="selectedScholarship"
               value={formData.selectedScholarship}
               onChange={handleChange}
+              required
             >
               <option value="">Select Scholarship</option>
               <option value="Below 10th class">Below class 10th</option>
@@ -181,15 +213,16 @@ const Scholarform = () => {
             </select>
           </label>
         </div>
-
-        <button type="submit">Submit</button>
+        {
+          isClicked ? <button type="button">Loading..</button> : <button type="submit">Submit</button>
+        }
+        
       </form>
 
       <footer className={styles.footer}>
-        <p>
-        Copyright@Careerpoint. All rights reserved
-        </p>
-     </footer>
+        <p>Copyright@Careerpoint. All rights reserved</p>
+      </footer>
+      <ToastContainer />
     </>
   );
 };
