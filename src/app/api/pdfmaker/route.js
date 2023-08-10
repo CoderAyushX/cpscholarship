@@ -18,6 +18,7 @@ export async function POST(req) {
 
   const browser = await puppeteer.launch({
     headless: "new",
+    executablePath: '/vercel/path/to/chromium'
   });
 
   const page = await browser.newPage();
@@ -29,7 +30,6 @@ export async function POST(req) {
 
   const headers = new Headers();
   headers.set("Content-Type", "application/pdf");
-  console.log(pdfBuffer);
   return new NextResponse(pdfBuffer, {
     status: 200,
     headers: headers,
