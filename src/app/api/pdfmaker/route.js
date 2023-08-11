@@ -2,7 +2,7 @@ import { connectionStr } from "@/app/database/dbconnect";
 import mongoose from "mongoose";
 import { NextResponse } from "next/server";
 import { Students } from "@/app/database/module/scholarshipForm";
-import puppeteer from "puppeteer-core";
+import Chromium from "chrome-aws-lambda";
 import Document from "./document";
 
 mongoose
@@ -16,10 +16,14 @@ export async function POST(req) {
   const response = await req.json();
   let studentData = await Students.findOne({ rollNo: response.data });
 
-  const browser = await puppeteer.launch({
-    headless: "new",
-    executablePath: '/vercel/path/to/chromium'
+  const browser = await Chromium.puppeteer.launch({
+    args: Chromium.args,
+    defaultViewport: Chromium.defaultViewport,
+    executablePath: await Chromium.executablePath,
+    headless: Chromium.headless,
+    ignoreHTTPSErrors: true,
   });
+
 
   const page = await browser.newPage();
   await page.setContent(Document(studentData));
