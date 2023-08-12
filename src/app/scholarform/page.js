@@ -8,6 +8,7 @@ import { useRouter } from "next/navigation";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+
 const Scholarform = () => {
   const router = useRouter();
   const [isClicked, setIsClicked] = useState(false);
