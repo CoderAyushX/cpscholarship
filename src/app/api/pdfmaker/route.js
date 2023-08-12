@@ -3,8 +3,7 @@ import mongoose from "mongoose";
 import { NextResponse } from "next/server";
 import { Students } from "@/app/database/module/scholarshipForm";
 import Document from "./document";
-
-const chromium = require('chrome-aws-lambda');
+import chrome from 'chrome-aws-lambda';
 mongoose
   .connect(connectionStr)
   .then(() => console.log("Connected to MongoDB"))
@@ -15,13 +14,13 @@ export async function POST(req) {
   let studentData = await Students.findOne({ rollNo: response.data });
 
   
-  const browser = await chromium.puppeteer.launch({
-    executablePath: await chromium.executablePath,
-    args: chromium.args,
-    defaultViewport: chromium.defaultViewport,
-    headless: chromium.headless,
-});
-
+  const browser = await chromium.puppeteer
+        .launch({
+            args: chrome.args,
+            defaultViewport: chrome.defaultViewport,
+            executablePath: await chrome.executablePath,
+            headless: chrome.headless
+        });
 
   const page = await browser.newPage();
   await page.setContent(Document(studentData));
