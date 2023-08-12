@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import { NextResponse } from "next/server";
 import { Students } from "@/app/database/module/scholarshipForm";
 import Document from "./document";
-import { chromium } from 'playwright';
+import { chromium } from 'playwright-core';
 mongoose
   .connect(connectionStr)
   .then(() => console.log("Connected to MongoDB"))
