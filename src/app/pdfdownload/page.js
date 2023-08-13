@@ -1,32 +1,28 @@
-"use client"
+"use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styles from "@/app/style/pdfdownload.module.css";
 import Header from "../components/Header";
 import Image from "next/image";
 import axios from "axios";
 import { useSearchParams } from "next/navigation";
 import Document from "./document"; // Update the import path accordingly
-import html2pdf from "html2pdf.js";
+import  html2pdf  from "html2pdf.js";
 
 const PdFDownload = () => {
   const [isClicked, setIsClicked] = useState(false);
   const searchParams = useSearchParams();
 
-  useEffect(() => {
-    if (isClicked) {
-      generatePDF();
-    }
-  }, [isClicked]);
-
   const generatePDF = async () => {
+    setIsClicked(true);
+
     try {
       const queryParameter = searchParams.get("rollNo");
       const response = await axios.post("/api/pdfmaker", {
         data: queryParameter,
       });
 
-      const htmlContent = Document(response.data);
+      const htmlContent = Document(response.data); // Assuming response.data is the parsed HTML content
       const contentElement = document.createElement("div");
       contentElement.innerHTML = htmlContent;
 
@@ -38,22 +34,15 @@ const PdFDownload = () => {
         jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
       };
 
-      if (typeof window !== "undefined") {
-        const html2pdf = require("html2pdf.js");
-        html2pdf().from(contentElement).set(pdfOptions).save();
-      }
+      html2pdf().from(contentElement).set(pdfOptions).save();
+
+      setIsClicked(false);
     } catch (error) {
       console.error("Error generating PDF:", error);
-    } finally {
       setIsClicked(false);
     }
   };
-
-  const handleDownloadClick = () => {
-    setIsClicked(true);
-  };
-
-
+  
   return (
     <>
       <Header />
@@ -69,13 +58,13 @@ const PdFDownload = () => {
               className={styles.pdfImage}
             />
           </div>
-          <button
-            className={styles.downloadButton}
-            onClick={handleDownloadClick}
-            disabled={isClicked}
-          >
-            {isClicked ? "Downloading..." : "Download"}
-          </button>
+          {isClicked ? (
+            <button className={styles.downloadButton}>Downloding...</button>
+          ) : (
+            <button className={styles.downloadButton} onClick={generatePDF}>
+              Download
+            </button>
+          )}
         </div>
       </div>
       <footer className={styles.footer}>
