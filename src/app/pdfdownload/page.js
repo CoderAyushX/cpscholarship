@@ -7,34 +7,42 @@ import Image from "next/image";
 import axios from "axios";
 import { useSearchParams } from "next/navigation";
 import { save } from "save-file";
+import Document from "./document"; // Update the import path accordingly
+import html2pdf from "html2pdf.js";
 
-
-
-
-const PdFDownload= () => {
+const PdFDownload = () => {
   const [isClicked, setIsClicked] = useState(false);
   const searchParams = useSearchParams();
 
   const generatePDF = async () => {
-    setIsClicked(!isClicked);
+    setIsClicked(true);
+
     try {
       const queryParameter = searchParams.get("rollNo");
-      const response = await axios.post(
-        "/api/pdfmaker",
-        {
-          data: queryParameter,
-        },
-        {
-          responseType: "blob", // Specify response type as blob
-        }
-      );
+      const response = await axios.post("/api/pdfmaker", {
+        data: queryParameter,
+      });
 
-      save(response.data, "generated-pdf.pdf");
+      const htmlContent = Document(response.data); // Assuming response.data is the parsed HTML content
+      const contentElement = document.createElement("div");
+      contentElement.innerHTML = htmlContent;
+
+      const pdfOptions = {
+        margin: 0,
+        filename: "my-admit-card.pdf",
+        image: { type: "jpeg", quality: 0.98 },
+        html2canvas: { scale: 1 },
+        jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
+      };
+
+      html2pdf().from(contentElement).set(pdfOptions).save();
+      setIsClicked(false);
     } catch (error) {
       console.error("Error generating PDF:", error);
+      setIsClicked(false);
     }
-    setIsClicked(false);
   };
+
   return (
     <>
       <Header />
@@ -64,6 +72,6 @@ const PdFDownload= () => {
       </footer>
     </>
   );
-}
+};
 
 export default PdFDownload;
