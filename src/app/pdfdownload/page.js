@@ -26,6 +26,8 @@ const PdFDownload = () => {
       const contentElement = document.createElement("div");
       contentElement.innerHTML = htmlContent;
 
+     
+    if (typeof window !== "undefined") { // Check if running in browser environment
       const pdfOptions = {
         margin: 0,
         filename: "my-admit-card.pdf",
@@ -35,6 +37,7 @@ const PdFDownload = () => {
       };
 
       html2pdf().from(contentElement).set(pdfOptions).save();
+    }
 
       setIsClicked(false);
     } catch (error) {
