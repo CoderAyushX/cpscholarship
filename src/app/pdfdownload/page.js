@@ -38,7 +38,10 @@ const PdFDownload = () => {
         jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
       };
 
-      html2pdf().from(contentElement).set(pdfOptions).save();
+      if (typeof window !== "undefined") {
+        const html2pdf = require("html2pdf.js");
+        html2pdf().from(contentElement).set(pdfOptions).save();
+      }
     } catch (error) {
       console.error("Error generating PDF:", error);
     } finally {
@@ -49,6 +52,7 @@ const PdFDownload = () => {
   const handleDownloadClick = () => {
     setIsClicked(true);
   };
+
 
   return (
     <>
