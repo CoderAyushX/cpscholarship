@@ -44,8 +44,10 @@
   .container {
    height: 35vh;
   }
+  .content{
+    padding: 0 10px;
+  }
   .content h1 {
     font-size: 22px;
-    width: 80%;
   }
 }
