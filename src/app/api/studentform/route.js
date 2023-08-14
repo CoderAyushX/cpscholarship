@@ -69,7 +69,7 @@ export async function POST(req) {
 const generateRollNo = (data) => {
   const now = new Date();
   const day = String(now.getDate()).padStart(2, "0");
-  const randomNo = Math.floor(Math.random() * 100000);
+  const randomNo = Math.floor(Math.random() * 10000);
   const firstNameInitials = data.firstName.slice(0, 2);
   const fatherNameInitials = data.fathersName.slice(0, 2);
   return `${fatherNameInitials}${day}${randomNo}${firstNameInitials}`;
