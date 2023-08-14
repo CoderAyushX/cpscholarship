@@ -108,7 +108,7 @@ const Document = ({
   </div>
 
   <div class="details">
-    <p class="rollNo"><strong>Roll No:</strong> ${rollNo}</p>
+    <p class="rollNo"><strong>Roll No:</strong>  <i>${rollNo}</i></p>
     <p></p>
     <p><strong>Name:</strong> ${firstName} ${lastName}</p>
     <p><strong>Father's Name:</strong> ${fathersName}</p>
@@ -121,11 +121,11 @@ const Document = ({
   </div>
 
   <p class="congo-text">
-   "Congratulations  ${firstName} ${lastName}, <br> <br> Your dedication and hard work have earned you a chance to
+   Congratulations  ${firstName} ${lastName}!!, <br> <br> Your dedication and hard work have earned you a chance to
     excel. As you embark on your ${selectedScholarship}  scholarship journey, may your dreams take
     flight and your efforts lead you to success. Best wishes, 
     <br> <br>
-    <i>Carrer Point Biharsharif<i/>
+    <i>~Carrer Point Biharsharif<i/>
   </p>
   <div class="institution-details-box">
     <div class="signatures">
