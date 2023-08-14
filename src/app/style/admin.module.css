@@ -27,6 +27,7 @@
   display: flex;
   flex-wrap: wrap;
   max-width: 700px;
+  padding: 0 10px;
   justify-content: space-around;
   align-items: end;
   margin: 80px auto 20px auto;
