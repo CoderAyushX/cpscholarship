@@ -11,15 +11,10 @@ const AdminLink = () => {
         <Link href="cpadminlink/form-table" className={styles.apply_button}>
           Student Form Data
         </Link>
-        <Link href="scholarform" className={styles.apply_button}>
-          Apply Now 
+        <Link href="cpadminlink/today-form-table" className={styles.apply_button}>
+          See Who Applied Today
         </Link>
-        <Link href="scholarform" className={styles.apply_button}>
-          Apply Now 
-        </Link>
-        <Link href="scholarform" className={styles.apply_button}>
-          Apply Now 
-        </Link>
+      
       </div>
     </>
   );
