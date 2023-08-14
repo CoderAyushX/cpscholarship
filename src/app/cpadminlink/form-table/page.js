@@ -110,7 +110,7 @@ const Formdata = () => {
           <h2>Student Form Data</h2>
         </div>
         {isClicked ? (
-          <button onClick={csvGenerator} className={adminstyles.downloadButton}>
+          <button className={adminstyles.downloadButton}>
             downloading....
           </button>
         ) : (
