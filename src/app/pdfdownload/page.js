@@ -52,8 +52,14 @@ const PdFDownload = () => {
       newWindow.document.head.appendChild(style);
 
       newWindow.document.close();
-      newWindow.print();
+    
 
+      newWindow.addEventListener('afterprint', () => {
+        setTimeout(() => {
+          newWindow.close();
+        }, 1000); // Adjust the delay as needed
+      });
+      newWindow.print();
       // setTimeout(() => {
       //   newWindow.close();
       // }, 1000);
