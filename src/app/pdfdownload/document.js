@@ -50,7 +50,7 @@ const Document = ({
   }
   .congo-text{
     font-size: 18px;
-    margin-top: 85px;
+    margin-top: 75px;
     border: .5px solid black;
     padding: 20px 10px;
   }
@@ -80,7 +80,7 @@ const Document = ({
     line-height: 1.5;
     border-top: 0.5px solid #000;
     padding-top: 15px;
-    margin-top: 40px;
+    margin-top: 25px;
   }
 
   .institution-details p {
