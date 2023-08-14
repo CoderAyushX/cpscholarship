@@ -154,7 +154,7 @@
 .program_item {
   display: flex;
   width: 420px;
-  min-height: 154px;
+  height: 154px;
   align-items: center;
   background-color: var(--primary-color);
   border-radius: 15px;

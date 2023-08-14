@@ -50,6 +50,7 @@ const PdFDownload = () => {
     }
 `;
       newWindow.document.head.appendChild(style);
+      newWindow.document.title = `cp ${response.data.firstName} admit card`
 
       newWindow.document.close();
     
@@ -60,7 +61,7 @@ const PdFDownload = () => {
       };
       
       newWindow.document.body.addEventListener('click', closeWindowAfterInteraction);
-      newWindow.print();
+      newWindow.print({ filename: 'amdit-card.pdf' });
       // setTimeout(() => {
       //   newWindow.close();
       // }, 1000);

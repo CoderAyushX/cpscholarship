@@ -8,7 +8,6 @@ import { useRouter } from "next/navigation";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-
 const Scholarform = () => {
   const router = useRouter();
   const [isClicked, setIsClicked] = useState(false);
@@ -30,22 +29,33 @@ const Scholarform = () => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
       ...prevState,
-      [name]: value.trim(),
+      [name]: value,
     }));
   };
 
   const handleSubmit = async (e) => {
     setIsClicked(!isClicked);
     e.preventDefault();
+
+    // Trim the input values before storing in state
+    const trimmedFormData = Object.entries(formData).reduce(
+      (acc, [key, value]) => {
+        acc[key] = value.trim();
+        return acc;
+      },
+      {}
+    );
+
+    setFormData(trimmedFormData);
     try {
       const response = await axios.post("api/studentform", {
         data: formData,
       });
-     
+
       console.log("response:", response);
 
-      if (response.status === 201 ) {
-        router.push( `/pdfdownload?rollNo=${response.data.rollNo}`);
+      if (response.status === 201) {
+        router.push(`/pdfdownload?rollNo=${response.data.rollNo}`);
       } else {
         toast.error("Something went wrong");
         console.error("Form submission failed.");
@@ -54,8 +64,8 @@ const Scholarform = () => {
       console.log("Error posting data:", error);
     }
     setTimeout(() => {
-    setIsClicked(false); // Reset loading state
-  }, 1000);
+      setIsClicked(false); // Reset loading state
+    }, 1000);
   };
   return (
     <>
@@ -214,10 +224,11 @@ const Scholarform = () => {
             </select>
           </label>
         </div>
-        {
-          isClicked ? <button type="button">Loading..</button> : <button type="submit">Submit</button>
-        }
-        
+        {isClicked ? (
+          <button type="button">Loading..</button>
+        ) : (
+          <button type="submit">Submit</button>
+        )}
       </form>
 
       <footer className={styles.footer}>
