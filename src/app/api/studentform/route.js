@@ -11,7 +11,9 @@ mongoose
 
 export async function GET() {
   try {
-    const data = await Students.find();
+    let data = await Students.find({}, '-_id -__v -updatedAt');
+    data  = data.reverse()
+    console.log(data)
     return NextResponse.json(data);
   } catch (error) {
     return NextResponse.error("Internal server error");

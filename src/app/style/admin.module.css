@@ -1,0 +1,62 @@
+/* link page */
+
+.link_container {
+  max-width: 750px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 100px auto;
+}
+
+.link_container .apply_button {
+  margin-top: 20px;
+  padding: 15px 35px;
+  background-color: var(--primary-color);
+  color: var(--text-color-dark);
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.link_container .apply_button:hover {
+  opacity: 0.8;
+  transition: 0.1s;
+}
+.textAndButton {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 700px;
+  justify-content: space-around;
+  align-items: end;
+  margin: 80px auto 20px auto;
+}
+.downloadButton {
+  padding: 12px 45px;
+  background-color: var(--success-color);
+  color: var(--text-color-dark);
+  text-decoration: none;
+  border-radius: 4px;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.howto_head_box h2 {
+  font-weight: 900;
+  font-size: 32px;
+  position: relative;
+}
+
+.howto_head_box h2::after {
+  content: "";
+  width: 30%;
+  height: 6px;
+  border-radius: 10px;
+  position: absolute;
+  top: -30%;
+  left: 0%;
+  background: var(--primary-color);
+}
