@@ -1,33 +1,18 @@
-// components/Header.js
+"use client"
 import React from "react";
 import Link from "next/link";
 import styles from "@/app/style/header.module.css";
 import Image from "next/image";
 import { BsFillTelephoneFill } from "react-icons/bs";
-
 import { IoMail} from "react-icons/io5";
+
+import { useRouter } from "next/navigation";
 const Header = () => {
-  // return (
-  //   <header className={styles.navbar}>
-  //     <div className={styles.image_container}>
-  //       <Image
-  //         src={"/logo.png"}
-  //         layout="fill"
-  //         className={styles.image}
-  //         alt="how to image"
-  //         quality={100}
-  //       />
-  //     </div>
-  //     <div className={styles.navbar__actions}>
-  //     <Link href="/contact" className={styles.contact_us}>
-  //         Contact us
-  //       </Link>
-  //       <Link href="scholarform" className={styles.apply_button}>
-  //         Apply Now
-  //       </Link>
-  //     </div>
-  //   </header>
-  // );
+  const router = useRouter();
+
+  const toHomePage = () => {
+    router.push("/");
+  }
 
   return (
     <header>
@@ -38,6 +23,7 @@ const Header = () => {
             className="logo_img"
             layout="fill"
             alt="logo"
+            onClick={toHomePage}
           />
         </div>
 
