@@ -7,12 +7,12 @@ import Image from "next/image";
 import axios from "axios";
 import { useSearchParams } from "next/navigation";
 import Document from "./document"; // Update the import path accordingly
-import jsPDF from "jspdf";
-import html2canvas from "html2canvas";
+import { useRouter } from "next/navigation";
 
 const PdFDownload = () => {
   const [isClicked, setIsClicked] = useState(false);
   const searchParams = useSearchParams();
+  const router = useRouter();
 
   // Create a ref for the content element
   const contentRef = useRef(null);
@@ -54,11 +54,12 @@ const PdFDownload = () => {
       newWindow.document.close();
     
 
-      newWindow.addEventListener('afterprint', () => {
-        setTimeout(() => {
-          newWindow.close();
-        }, 1000); // Adjust the delay as needed
-      });
+      const closeWindowAfterInteraction = () => {
+        newWindow.close();
+        // router.push( '/');
+      };
+      
+      newWindow.document.body.addEventListener('click', closeWindowAfterInteraction);
       newWindow.print();
       // setTimeout(() => {
       //   newWindow.close();
@@ -74,9 +75,6 @@ const PdFDownload = () => {
   return (
     <>
       <Header />
-      <div className={{ display: "none" }} ref={contentRef}>
-        {/* Content here will be populated by generatePDF */}
-      </div>
       <div className={styles.container}>
         <div className={styles.content}>
           <h1>Thanks for Applying for Scholarship</h1>

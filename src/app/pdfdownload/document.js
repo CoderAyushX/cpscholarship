@@ -7,7 +7,6 @@ const Document = ({
   mobileNo,
   email,
   selectedClass,
-  previousClassMarks,
   selectedTestDate,
   selectedTimeSlot,
   selectedScholarship,
