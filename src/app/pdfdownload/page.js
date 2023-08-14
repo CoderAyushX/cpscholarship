@@ -1,17 +1,21 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import styles from "@/app/style/pdfdownload.module.css";
 import Header from "../components/Header";
 import Image from "next/image";
 import axios from "axios";
 import { useSearchParams } from "next/navigation";
 import Document from "./document"; // Update the import path accordingly
-import  html2pdf  from "html2pdf.js";
+import jsPDF from "jspdf";
+import html2canvas from "html2canvas";
 
 const PdFDownload = () => {
   const [isClicked, setIsClicked] = useState(false);
   const searchParams = useSearchParams();
+
+  // Create a ref for the content element
+  const contentRef = useRef(null);
 
   const generatePDF = async () => {
     setIsClicked(true);
@@ -23,21 +27,33 @@ const PdFDownload = () => {
       });
 
       const htmlContent = Document(response.data); // Assuming response.data is the parsed HTML content
-      const contentElement = document.createElement("div");
-      contentElement.innerHTML = htmlContent;
 
-     
-    if (typeof window !== "undefined") { // Check if running in browser environment
-      const pdfOptions = {
-        margin: 0,
-        filename: "my-admit-card.pdf",
-        image: { type: "jpeg", quality: 0.98 },
-        html2canvas: { scale: 1 },
-        jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
-      };
+      const newWindow = window.open("", "_blank");
+      newWindow.document.write(htmlContent);
 
-      html2pdf().from(contentElement).set(pdfOptions).save();
+      const style = document.createElement("style");
+      style.innerHTML = `
+        @media print {
+           @page {
+          margin: 0;
+          size: 211mm 295mm; /* Set the A4 dimensions */
+       }
+      html, body {
+         width: 211mm;
+         height: 99%;
+         margin: 0;
+         padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     }
     }
+`;
+      newWindow.document.head.appendChild(style);
+
+      newWindow.document.close();
+      newWindow.print();
+      newWindow.close();
 
       setIsClicked(false);
     } catch (error) {
@@ -45,10 +61,13 @@ const PdFDownload = () => {
       setIsClicked(false);
     }
   };
-  
+
   return (
     <>
       <Header />
+      <div className={{ display: "none" }} ref={contentRef}>
+        {/* Content here will be populated by generatePDF */}
+      </div>
       <div className={styles.container}>
         <div className={styles.content}>
           <h1>Thanks for Applying for Scholarship</h1>
