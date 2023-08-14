@@ -53,7 +53,10 @@ const PdFDownload = () => {
 
       newWindow.document.close();
       newWindow.print();
-      newWindow.close();
+
+      setTimeout(() => {
+        newWindow.close();
+      }, 1000);
 
       setIsClicked(false);
     } catch (error) {
