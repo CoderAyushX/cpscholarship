@@ -12,10 +12,7 @@ import { useRouter } from "next/navigation";
 const PdFDownload = () => {
   const [isClicked, setIsClicked] = useState(false);
   const searchParams = useSearchParams();
-  const router = useRouter();
-
-  // Create a ref for the content element
-  const contentRef = useRef(null);
+ ;
 
   const generatePDF = async () => {
     setIsClicked(true);
@@ -50,18 +47,20 @@ const PdFDownload = () => {
     }
 `;
       newWindow.document.head.appendChild(style);
-      newWindow.document.title = `cp ${response.data.firstName} admit card`
+      newWindow.document.title = `cp ${response.data.firstName} admit card`;
 
       newWindow.document.close();
-    
 
       const closeWindowAfterInteraction = () => {
         newWindow.close();
         // router.push( '/');
       };
-      
-      newWindow.document.body.addEventListener('click', closeWindowAfterInteraction);
-      newWindow.print({ filename: 'amdit-card.pdf' });
+
+      newWindow.document.body.addEventListener(
+        "click",
+        closeWindowAfterInteraction
+      );
+      newWindow.print({ filename: "amdit-card.pdf" });
       // setTimeout(() => {
       //   newWindow.close();
       // }, 1000);
