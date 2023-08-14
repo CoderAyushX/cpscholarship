@@ -27,7 +27,7 @@ export async function GET() {
         $gte: currentDate,
         $lte: endOfDay,
       },
-    });
+    }, '-_id -__v -updatedAt');
 
     return NextResponse.json(results);
   } catch (error) {
