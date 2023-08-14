@@ -15,8 +15,6 @@
   justify-content: center;
 }
 
-
-
 .downloadButton {
   padding: 12px 45px;
   background-color: var(--primary-color);
@@ -44,9 +42,10 @@
 /****************Responsive****************/
 @media only screen and (max-width: 600px) {
   .container {
-   height: 40vh;
+   height: 35vh;
   }
   .content h1 {
     font-size: 22px;
+    width: 80%;
   }
 }
