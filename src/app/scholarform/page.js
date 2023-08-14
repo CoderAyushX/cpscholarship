@@ -151,9 +151,7 @@ const Scholarform = () => {
               required
             >
               <option value="">Select Class</option>
-              <option value="VIth">Class VIth</option>
-              <option value="VIIth">Class VIIth</option>
-              <option value="VIIItH">Class VIIIth</option>
+              <option value="VIIIth">Class VIIIth</option>
               <option value="IXth">Class IXth</option>
               <option value="Xth">Class Xth</option>
               <option value="XIth">Class XIth</option>
